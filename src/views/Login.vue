@@ -20,10 +20,21 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { useHead } from '@unhead/vue'
 
 const username = ref('');
 const password = ref('');
 const router = useRouter();
+
+useHead({
+  title: 'Login', // Tùy chọn: Thay đổi cả tiêu đề trang
+  meta: [
+    {
+      name: 'robots',
+      content: 'noindex, nofollow'
+    }
+  ]
+})
 
 const handleLogin = () => {
   if (username.value && password.value) {

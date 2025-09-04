@@ -32,7 +32,18 @@
     </div>
   </div>
 </template>
-
+<script setup>
+  import { useHead } from '@unhead/vue'
+  useHead({
+    title: 'Images', // Tùy chọn: Thay đổi cả tiêu đề trang
+    meta: [
+      {
+        name: 'robots',
+        content: 'noindex, nofollow'
+      }
+    ]
+  })
+</script>
 <style scoped>
 .page-header {
   display: flex;

@@ -71,7 +71,16 @@
 </template>
 
 <script setup>
-// No script logic needed for this static view
+  import { useHead } from '@unhead/vue'
+  useHead({
+    title: 'Settings', // Tùy chọn: Thay đổi cả tiêu đề trang
+    meta: [
+      {
+        name: 'robots',
+        content: 'noindex, nofollow'
+      }
+    ]
+  })
 </script>
 
 <style scoped>
