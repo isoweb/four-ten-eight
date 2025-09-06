@@ -22,10 +22,6 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useHead } from '@unhead/vue'
 
-const username = ref('');
-const password = ref('');
-const router = useRouter();
-
 useHead({
   title: 'Login', // Tùy chọn: Thay đổi cả tiêu đề trang
   meta: [
@@ -34,7 +30,12 @@ useHead({
       content: 'noindex, nofollow'
     }
   ]
-})
+});
+
+
+const username = ref('');
+const password = ref('');
+const router = useRouter();
 
 const handleLogin = () => {
   if (username.value && password.value) {
